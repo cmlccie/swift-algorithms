@@ -92,6 +92,7 @@ public class PrimeGenerator : Sequence, IteratorProtocol {
         let nextMultiple = multiple.nextMultiple()
         let nextProduct = nextMultiple.product()
         var nextMultiplesArray = streamingSieve[nextProduct] ?? Array<PrimeMultiple>()
-        nextMultiplesArray.append(multiple)
+        nextMultiplesArray.append(nextMultiple)
+        streamingSieve[nextProduct] = nextMultiplesArray
     }
 }
