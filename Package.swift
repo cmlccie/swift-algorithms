@@ -17,11 +17,9 @@ let package = Package(
     targets: [
         .target(
             name: "SwiftAlgorithms",
-            dependencies: [],
-            path: "Sources"),
+            dependencies: []),
         .testTarget(
             name: "SwiftAlgorithmsTests",
-            dependencies: ["SwiftAlgorithms"],
-            path: "Tests"),
+            dependencies: ["SwiftAlgorithms"]),
     ]
 )
