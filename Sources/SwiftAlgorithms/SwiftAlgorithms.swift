@@ -1,3 +1,3 @@
-struct swift_algorithms {
+public struct swift_algorithms {
     var text = "Hello, World!"
 }
