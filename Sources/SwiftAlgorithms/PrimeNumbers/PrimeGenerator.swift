@@ -66,6 +66,12 @@ public class PrimeGenerator : Sequence, IteratorProtocol {
         return prime
     }
 
+    public static func generate(numberOfPrimes: Int) {
+        while primes.count < numberOfPrimes {
+            _ = generateNextPrime()
+        }
+    }
+
     static func generateNextPrime() -> Int {
         // Advance through the composites to the next prime
         while let multiples = streamingSieve[nextCandidate] {
